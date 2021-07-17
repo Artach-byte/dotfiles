@@ -1,0 +1,130 @@
+15:25:39.868 [ajour][INFO] Ajour 1.2.2 has started.
+15:25:39.869 [ajour::gui][DEBUG] config loaded:
+Config {
+    wow: Wow {
+        directory: None,
+        directories: {
+            Retail: "/home/joe/Games/world-of-warcraft/drive_c/Program Files (x86)/World of Warcraft/_retail_",
+        },
+        flavor: Retail,
+    },
+    addons: Addons {
+        global_release_channel: Stable,
+        ignored: {
+            Retail: [],
+        },
+        release_channels: {
+            Retail: {},
+        },
+        delete_saved_variables: false,
+    },
+    theme: Some(
+        "Nord",
+    ),
+    column_config: V1 {
+        local_version_width: 150,
+        remote_version_width: 150,
+        status_width: 85,
+    },
+    window_size: Some(
+        (
+            1090,
+            1173,
+        ),
+    ),
+    scale: None,
+    backup_directory: Some(
+        "/home/joe/Drives/3tb_hdd/Ajour",
+    ),
+    backup_addons: true,
+    backup_wtf: true,
+    backup_config: true,
+    backup_screenshots: true,
+    hide_ignored_addons: false,
+    self_update_channel: Stable,
+    weak_auras_account: {
+        Retail: "309078222#1",
+    },
+    alternating_row_colors: true,
+    language: English,
+    catalog_source: None,
+    auto_update: true,
+    compression_format: Zip,
+}
+15:25:39.869 [ajour::gui][DEBUG] antialiasing: true
+15:25:39.945 [ajour_core::utility][DEBUG] checking for application update
+15:25:39.945 [ajour_core::theme][DEBUG] loading user themes
+15:25:39.946 [ajour_core::fs::theme][DEBUG] loaded 0 user themes
+15:25:39.968 [ajour::gui::update][DEBUG] Message::ThemesLoaded(0 themes)
+15:25:39.968 [ajour::gui::update][DEBUG] Message::CachesLoaded(error: false)
+15:25:39.969 [ajour::gui::update][DEBUG] Message::Parse
+15:25:39.969 [ajour::gui::update][DEBUG] preparing to parse addons in "/home/joe/Games/world-of-warcraft/drive_c/Program Files (x86)/World of Warcraft/_retail_/Interface/AddOns"
+15:25:39.969 [ajour_core::parse][DEBUG] Retail - parsing addons folder
+15:25:39.969 [ajour_core::parse][DEBUG] Retail - 187 folders in AddOns directory to parse
+15:25:39.970 [ajour_core::parse][DEBUG] Retail - 187 fingerprints: 187 cached, 0 calculated, 0 added, 0 removed
+15:25:39.975 [ajour_core::parse][DEBUG] Retail - 187 addon folders successfully parsed from '.toc'
+15:25:39.975 [ajour_core::parse][DEBUG] Retail - 0 valid cache entries retrieved
+15:25:39.975 [ajour_core::parse][DEBUG] Retail - 187 unique fingerprints to check against curse api
+15:25:39.978 [ajour::gui::update][DEBUG] Message::CheckWeakAurasInstalled(Retail, is_installed: true)
+15:25:39.978 [ajour::gui::update][DEBUG] Message::LatestBackup(Some(2021-07-16T03:33:28))
+15:25:39.978 [ajour::gui::update][DEBUG] Message::ListWtfAccounts(Retail, num_accounts: 1)
+15:25:39.984 [ajour::gui::update][DEBUG] Message::ParsedAuras(Retail, num_auras: 0)
+15:25:40.429 [ajour::gui::update][DEBUG] Message::LatestRelease(Some("1.2.2"))
+15:25:40.659 [ajour_core::catalog][DEBUG] Downloaded latest catalog from https://raw.githubusercontent.com/ajour/catalog/main/catalog-0.1.0.json
+15:25:40.978 [ajour::gui::update][DEBUG] Message::CatalogDownloaded(15564 addons in catalog)
+15:25:41.766 [ajour_core::parse][DEBUG] Retail - 101 curse packages fetched
+15:25:41.895 [ajour_core::parse][DEBUG] Retail - 1 tukui packages fetched
+15:25:42.164 [ajour_core::parse][DEBUG] Retail - 32 wowi packages fetched
+15:25:42.164 [ajour_core::parse][DEBUG] Retail - 0 townlong packages fetched
+15:25:42.164 [ajour_core::parse][DEBUG] Retail - 0 git packages fetched
+15:25:42.166 [ajour_core::parse][DEBUG] Retail - 92 addons built from curse packages
+15:25:42.166 [ajour_core::parse][DEBUG] Retail - 1 addons built from tukui packages
+15:25:42.166 [ajour_core::parse][DEBUG] Retail - 0 addons built from wowi packages
+15:25:42.166 [ajour_core::parse][DEBUG] Retail - 0 addons built from townlong-yak packages
+15:25:42.166 [ajour_core::parse][DEBUG] Retail - 0 addons built from git packages
+15:25:42.166 [ajour_core::parse][DEBUG] Retail - 0 unknown addon folders
+15:25:42.166 [ajour_core::parse][DEBUG] Retail - 93 addons successfully parsed
+15:25:42.182 [ajour::gui::update][DEBUG] Message::ParsedAddons(Retail, 93 addons)
+15:25:42.182 [ajour::gui::update][DEBUG] Interaction::UpdateAll(My Addons)
+15:25:42.182 [ajour_core::network][DEBUG] downloading remote version v27 for HandyNotes_ShadowlandsTreasures
+15:25:42.182 [ajour_core::network][DEBUG] downloading remote version v90100.4 for SilverDragon
+15:25:42.915 [ajour::gui::update][DEBUG] Message::DownloadedAddon((Retail, HandyNotes_ShadowlandsTreasures, error: false))
+15:25:42.920 [ajour::gui::update][DEBUG] Message::UnpackedAddon((HandyNotes_ShadowlandsTreasures, error: false))
+15:25:42.920 [ajour_core::parse][DEBUG] Retail - updating fingerprint for HandyNotes_ShadowlandsTreasures
+15:25:42.929 [ajour::gui::update][DEBUG] Message::UpdateFingerprint((Retail, HandyNotes_ShadowlandsTreasures, error: false))
+15:25:43.028 [ajour::gui::update][DEBUG] Message::DownloadedAddon((Retail, SilverDragon, error: false))
+15:25:43.089 [ajour::gui::update][DEBUG] Message::UnpackedAddon((SilverDragon, error: false))
+15:25:43.090 [ajour_core::parse][DEBUG] Retail - updating fingerprint for SilverDragon
+15:25:43.090 [ajour_core::parse][DEBUG] Retail - updating fingerprint for SilverDragon_Legion
+15:25:43.090 [ajour_core::parse][DEBUG] Retail - updating fingerprint for SilverDragon_BattleForAzeroth
+15:25:43.090 [ajour_core::parse][DEBUG] Retail - updating fingerprint for SilverDragon_Cataclysm
+15:25:43.090 [ajour_core::parse][DEBUG] Retail - updating fingerprint for SilverDragon_Mists
+15:25:43.090 [ajour_core::parse][DEBUG] Retail - updating fingerprint for SilverDragon_RangeExtender
+15:25:43.090 [ajour_core::parse][DEBUG] Retail - updating fingerprint for SilverDragon_Shadowlands
+15:25:43.090 [ajour_core::parse][DEBUG] Retail - updating fingerprint for SilverDragon_Vanilla
+15:25:43.090 [ajour_core::parse][DEBUG] Retail - updating fingerprint for SilverDragon_BurningCrusade
+15:25:43.090 [ajour_core::parse][DEBUG] Retail - updating fingerprint for SilverDragon_Overlay
+15:25:43.090 [ajour_core::parse][DEBUG] Retail - updating fingerprint for SilverDragon_Warlords
+15:25:43.090 [ajour_core::parse][DEBUG] Retail - updating fingerprint for SilverDragon_Wrath
+15:25:43.094 [ajour::gui::update][DEBUG] Message::UpdateFingerprint((Retail, SilverDragon_Cataclysm, error: false))
+15:25:43.094 [ajour::gui::update][DEBUG] Message::UpdateFingerprint((Retail, SilverDragon_Mists, error: false))
+15:25:43.094 [ajour::gui::update][DEBUG] Message::UpdateFingerprint((Retail, SilverDragon_Legion, error: false))
+15:25:43.094 [ajour::gui::update][DEBUG] Message::UpdateFingerprint((Retail, SilverDragon_BattleForAzeroth, error: false))
+15:25:43.103 [ajour::gui::update][DEBUG] Message::UpdateFingerprint((Retail, SilverDragon_RangeExtender, error: false))
+15:25:43.103 [ajour::gui::update][DEBUG] Message::UpdateFingerprint((Retail, SilverDragon_Shadowlands, error: false))
+15:25:43.103 [ajour::gui::update][DEBUG] Message::UpdateFingerprint((Retail, SilverDragon_BurningCrusade, error: false))
+15:25:43.103 [ajour::gui::update][DEBUG] Message::UpdateFingerprint((Retail, SilverDragon_Wrath, error: false))
+15:25:43.103 [ajour::gui::update][DEBUG] Message::UpdateFingerprint((Retail, SilverDragon_Vanilla, error: false))
+15:25:43.103 [ajour::gui::update][DEBUG] Message::UpdateFingerprint((Retail, SilverDragon_Warlords, error: false))
+15:25:43.103 [ajour::gui::update][DEBUG] Message::UpdateFingerprint((Retail, SilverDragon_Overlay, error: false))
+15:25:43.103 [ajour::gui::update][DEBUG] Message::UpdateFingerprint((Retail, SilverDragon, error: false))
+15:25:45.866 [ajour::gui::update][DEBUG] Interaction::ModeSelected(Catalog)
+15:25:47.980 [ajour::gui::update][DEBUG] Interaction::CatalogResultSizeSelected(Choice(Curse))
+15:25:51.238 [ajour::gui::update][DEBUG] Interaction::CatalogResultSizeSelected(_500)
+15:25:52.960 [ajour::gui::update][DEBUG] Interaction::SortCatalogColumn(DateReleased, Desc)
+15:25:53.452 [ajour::gui::update][DEBUG] Interaction::SortCatalogColumn(DateReleased, Asc)
+15:25:53.885 [ajour::gui::update][DEBUG] Interaction::SortCatalogColumn(DateReleased, Desc)
+15:25:56.322 [ajour::gui::update][DEBUG] Interaction::OpenLink(https://www.curseforge.com/wow/addons/shestakui)
+15:55:39.948 [ajour::gui::update][DEBUG] Message::CheckRepositoryUpdates
+15:55:40.722 [ajour::gui::update][DEBUG] Message::RepositoryPackagesFetched(Retail, 93 packages)
+15:55:40.722 [ajour::gui::update][DEBUG] Retail - No addon updates available

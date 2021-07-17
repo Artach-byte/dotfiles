@@ -1,0 +1,10 @@
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[user]
+	email = Joseph.hansen.96@gmail.com
+	name = Joseph Hansen
+[color]
+	ui = auto
+[init]
+	defaultBranch = main

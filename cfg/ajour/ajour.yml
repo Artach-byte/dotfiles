@@ -1,0 +1,37 @@
+---
+wow:
+  directory: ~
+  directories:
+    Retail: /home/joe/Games/world-of-warcraft/drive_c/Program Files (x86)/World of Warcraft/_retail_
+  flavor: Retail
+addons:
+  global_release_channel: Stable
+  ignored:
+    Retail: []
+  release_channels:
+    Retail: {}
+  delete_saved_variables: false
+theme: Nord
+column_config:
+  V1:
+    local_version_width: 150
+    remote_version_width: 150
+    status_width: 85
+window_size:
+  - 1090
+  - 1173
+scale: ~
+backup_directory: /home/joe/Drives/3tb_hdd/Ajour
+backup_addons: true
+backup_wtf: true
+backup_config: true
+backup_screenshots: true
+hide_ignored_addons: false
+self_update_channel: Stable
+weak_auras_account:
+  Retail: "309078222#1"
+alternating_row_colors: true
+language: English
+catalog_source: Curse
+auto_update: true
+compression_format: Zip

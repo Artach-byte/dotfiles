@@ -1,0 +1,308 @@
+; vim:ft=dosini
+
+;;;;;;;;;;
+; TOP BAR;
+;;;;;;;;;;
+
+[module/i3]
+type = internal/i3
+
+; pin-workspaces = ${config.i3-pin-workspaces}
+
+strip-wsnumbers = true
+
+index-sort = true
+enable-click = true
+enable-scroll = true
+wrapping-scroll = true
+reverse-scroll = true
+
+fuzzy-match = false
+
+; Available tags:
+;   <label-state> (default) - gets replaced with <label-(focused|unfocused|visible|urgent)>
+;   <label-mode> (default)
+format = <label-state> <label-mode>
+
+; ; color
+label-focused = 
+label-focused-underline = ${colors.nord7}
+label-focused-foreground = ${colors.nord7}
+label-focused-padding = 2
+
+label-unfocused = •
+label-unfocused-foreground = ${colors.nord9}
+label-unfocused-padding = 2
+
+label-urgent = 
+label-urgent-foreground = ${colors.urgent}
+label-urgent-background = ${colors.foreground}
+label-urgent-padding = 2
+
+; ; seperator
+label-separator = |
+label-separator-foreground = ${colors.buffer}
+
+[module/title]
+type = internal/xwindow
+format-foreground = ${colors.nord7}
+format-underline = ${colors.nord7}
+format-padding = 4
+
+label-maxlen = 20
+label-empty = Desktop
+
+[module/spotify]
+type = custom/script
+interval = 1
+; format-prefix = " "
+format = <label>
+exec = python ~/.config/polybar/scripts/spotify_status.py -f '{artist}: {song}'
+format-underline = ${colors.success}
+
+[module/discord]
+type = custom/script
+exec = echo " Discord "
+interval = 1
+tail = true
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-prefix-foreground = #738adb
+format-underline = #738adb
+click-left = discord &
+click-right = killall Discord && killall Discord
+format-prefix = ""
+
+[module/dropbox]
+type = custom/script
+exec = ~/.config/polybar/scripts/isrunning-dropbox.sh
+interval = 5
+label = 
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-prefix-foreground = #738adb
+format-underline = #738adb
+; format-prefix = 
+
+[module/caffeine]
+type = custom/menu
+
+label-open = 
+label-close = 
+label-open-padding = 0
+label-close-padding = 1
+label-separator = " "
+
+menu-0-0 = 
+menu-0-0-exec = caffeine -a
+menu-0-1 = 
+menu-0-1-exec = caffeine -d
+menu-0-2 = 
+menu-0-2-exec = caffeine kill
+
+[module/battery]
+type = internal/battery
+
+full-at = ${config.battery-full-at}
+
+battery = ${config.battery-bat}
+adapter = ${config.battery-adp}
+
+format-charging = <animation-charging> <label-charging>
+format-charging-underline = ${colors.foreground}
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-framerate = 750
+
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-underline = ${colors.notify}
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-foreground = ${colors.notify}
+
+label-full = 
+label-full-foreground = ${colors.success}
+label-full-underline = ${colors.success}
+
+[module/keyboard]
+type = internal/xkeyboard
+
+; List of indicators to ignore
+bufferlist-0 = num lock
+bufferlist-1 = scroll lock
+
+; Format
+format = <label-indicator>
+
+label-indicator-on-capslock =  CL
+label-indicator-on-capslock-foreground = ${colors.warning}
+label-indicator-on-capslock-underline = ${colors.warning}
+
+; Icons
+layout-icon-default = 
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+sink = alsa_output.usb-FiiO_DigiHug_USB_Audio-01.analog-stereo
+
+; Format 
+format-volume = <ramp-volume> <label-volume>
+format-volume-underline = ${colors.function}
+
+label-muted =  muted
+label-muted-foreground = ${colors.urgent}
+label-muted-underline = ${colors.urgent}
+
+ramp-volume-0 = 
+ramp-volume-0-foreground = ${colors.success}
+ramp-volume-1 = 
+ramp-volume-1-foreground = ${colors.notify}
+ramp-volume-2 = 
+ramp-volume-2-foreground = ${colors.urgent}
+
+ramp-headphones-0 = 
+
+ramp-volume-foreground = ${colors.nord7}
+
+[module/network-short]
+type = internal/network
+interface = wlan0 
+ 
+interval = 1
+
+format-connected = %{A1:networkmanager_dmenu:}<ramp-signal>%{A}
+format-disconnected = %{A1:networkmanager_dmenu:}<label-disconnected>%{A}
+
+label-disconnected = 
+label-disconnected-foreground = ${colors.urgent}
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+
+ramp-signal-0-foreground = ${colors.urgent}
+ramp-signal-0-underline = ${colors.urgent}
+
+ramp-signal-1-foreground = ${colors.notify}
+ramp-signal-1-underline = ${colors.notify}
+
+ramp-signal-2-foreground = ${colors.nord7}
+ramp-signal-2-underline = ${colors.nord7}
+
+ramp-signal-3-foreground = ${colors.success}
+ramp-signal-3-underline = ${colors.success}
+
+[module/date]
+type = internal/date
+interval = 1.0
+; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
+; NOTE: if you want to use syntax tags here you need to use %%{...}
+date = %I:%M %P
+
+format = <label>
+label =  %date%
+label-margin = 1
+label-underline = ${colors.nord8}
+
+;;;;;;;;;;;;
+;BOTTOM BAR;
+;;;;;;;;;;;;
+
+[module/weather]
+type = custom/script
+exec = ~/.config/polybar/scripts/openweathermap-fullfeatured.sh
+interval = 600
+
+label-font = 5
+
+[module/cpu]
+type = internal/cpu
+interval = 1
+
+format = <ramp-load> <label>
+
+ramp-load-0 = 
+ramp-load-0-foreground = ${colors.success}
+
+ramp-load-1 = 
+ramp-load-1-foreground = ${colors.warning}
+
+ramp-load-2 = 
+ramp-load-2-foreground = ${colors.urgent}
+
+[module/memory]
+type = internal/memory
+interval = 3
+
+format = <ramp-used> <label>
+
+label = %gb_used%/%gb_total%
+
+ramp-used-0 = 
+ramp-used-0-foreground = ${colors.success}
+
+ramp-used-1 = 
+ramp-used-1-foreground = ${colors.warning}
+
+ramp-used-2 = 
+ramp-used-2-foreground = ${colors.urgent}
+
+[module/network-detail]
+type = internal/network
+interface = wlan0
+
+interval = 3
+
+format-connected = <label-connected>
+
+label-connected =  %downspeed:9%   %upspeed:9%
+label-connected-foreground = ${colors.success}
+
+[module/temperature]
+type = internal/temperature
+
+interval = 0.5
+
+thermal-zone = 2
+
+base-temperature = 20
+
+warn-temperature = 60
+
+; Format
+format = <ramp> <label>
+format-warn = <label-warn>
+format-warn-background = ${colors.foreground}
+
+label-warn =  %temperature-c%
+label-warn-padding = 1
+label-warn-foreground = ${colors.urgent}
+label-warn-background = ${colors.foreground}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+
+
+ramp-0-foreground = ${colors.nord8}
+ramp-1-foreground = ${colors.nord8}
+ramp-2-foreground = ${colors.success}
+ramp-3-foreground = ${colors.success}
+ramp-4-foreground = ${colors.warning}
+
+[module/pacman-packages]
+type = custom/ipc
+hook-0 = sudo pacman -Qu | wc -l
+format-prefix = "📦 "
+click-left = updatepackages
+initial = 1

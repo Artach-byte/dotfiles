@@ -67,9 +67,6 @@ source ~/.config/zsh/plugins/zsh-fzf-history-search/zsh-fzf-history-search.plugi
 ## zsh-z -> https://github.com/agkozak/zsh-z
 source ~/.config/zsh/plugins/zsh-z/zsh-z.plugin.zsh
 
-## colored-man-pages -> https://github.com/ael-code/zsh-colored-man-pages
-source ~/.config/zsh/plugins/zsh-colored-man-pages/colored-man-pages.plugin.zsh
-
 ## completion for gh-cli -> https://github.com/sudosubin/zsh-github-cli
 source ~/.config/zsh/plugins/zsh-github-cli/cli.plugin.zsh
 

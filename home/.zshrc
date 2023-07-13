@@ -77,7 +77,7 @@ source ~/.config/zsh/plugins/zsh-z/zsh-z.plugin.zsh
 ## completion for gh-cli -> https://github.com/sudosubin/zsh-github-cli
 source ~/.config/zsh/plugins/zsh-github-cli/cli.plugin.zsh
 
-## Powerlevel10k theme
+## Powerlevel10k prompt
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 ## MUST BE LAST PLUGIN: syntax highlighting -> https://github.com/zsh-users/zsh-syntax-highlighting
@@ -86,9 +86,6 @@ source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plu
 ################################################################################
 #                              Plugins End                                     #
 ################################################################################
-#WARNING: keep starship prompt at bottom of file
-# starship Prompt
-#eval "$(starship init zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

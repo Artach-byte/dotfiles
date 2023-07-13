@@ -1,0 +1,50 @@
+Security
+https://us-cert.cisa.gov/ncas/alerts.xml Security
+https://security.googleblog.com/feeds/posts/default Security
+https://krebsonsecurity.com/feed/ Security
+https://www.schneier.com/feed/ Security
+https://taosecurity.blogspot.com/feeds/posts/default?alt=rss Security
+https://www.darkreading.com/rss.xml Security
+https://www.csoonline.com/feed/ Security
+https://www.securityweek.com/feed/ Security
+https://www.lastwatchdog.com/feed/ Security
+https://www.theguardian.com/technology/data-computer-security/rss Security
+https://www.eff.org/rss/updates.xml Security
+https://www.virusbulletin.com/rss Security
+https://securityboulevard.com/feed/ Security
+https://www.bleepingcomputer.com/feed/ Security
+https://blog.privacyguides.org/feed_rss_created.xml Security
+
+
+Linux
+#https://news.opensuse.org/feed/ Linux
+#https://archlinux.org/feeds/news/ Linux
+https://www.redhat.com/sysadmin/rss.xml Linux
+https://www.omgubuntu.co.uk/feed Linux
+https://www.phoronix.com/rss.php Linux
+https://thelinuxexp.com/feed.xml Linux
+https://www.learnlinux.tv/feed/ Linux
+https://www.gamingonlinux.com/article_rss.php Linux
+https://distrowatch.com/news/dw.xml Linux
+https://www.tecmint.com/feed/ Linux
+https://dot.kde.org/rss.xml Linux
+https://www.linux.com/feed/ Linux
+https://planet.kde.org/global/atom.xml Linux
+
+Windows
+https://techcommunity.microsoft.com/gxcuf89792/rss/board?board.id=Microsoft-Security-Baselines Windows
+https://api.msrc.microsoft.com/update-guide/rss Windows
+#https://4sysops.com/feed/ Windows
+
+Blogs
+https://stackoverflow.blog/feed/atom/ Blogs
+https://blog.cloudflare.com/rss/ Blogs
+https://www.backblaze.com/blog/feed/ Blogs
+https://christitus.com/index.xml Blogs
+
+News
+https://www.theoakleafnews.com/feed/rss News
+http://rss.slashdot.org/Slashdot/slashdot News
+https://bohemian.com/feed/ News
+https://localnewsmatters.org/feed/ News
+https://newsofthenorthbay.com/category/santa-rosa/feed/ News

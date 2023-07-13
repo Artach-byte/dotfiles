@@ -1,0 +1,61 @@
+# ░▀▀█░█▀█░▀█▀░█░█░█░█░█▀▄░█▀█░█▀▄░█▀▀
+# ░▄▀░░█▀█░░█░░█▀█░█░█░█▀▄░█▀█░█▀▄░█░░
+# ░▀▀▀░▀░▀░░▀░░▀░▀░▀▀▀░▀░▀░▀░▀░▀░▀░▀▀▀
+
+
+#########
+## Themes
+#########
+
+#include themes/nord
+#include themes/gruvbox
+include themes/catppuccin-frappe
+
+
+set selection-clipboard clipboard
+set window-title-home-tilde true
+set statusbar-home-tilde true
+set page-padding 1
+
+set font "Open Sans normal 16"
+set window-height 1024
+set window-width 768
+set render-loading false
+set adjust-open "best-fit"
+set synctex true
+set synctex-editor-command "nvr --remote-silent +%{line} %{input}"
+# Fix following links(!)
+set sandbox none
+
+# Navigation
+map g goto top
+map u scroll half-up
+map d scroll half-down
+map D toggle_page_mode
+map <C-u> navigate previous
+map <C-d> navigate next
+
+map r reload
+map R rotate
+
+map i recolor
+map p print
+
+map K zoom in
+map J zoom out
+
+# stop at page boundaries
+set scroll-page-aware true
+set scroll-full-overlap 0.01
+set scroll-step 50
+set incremental-search true
+set guioptions ""
+map b toggle_statusbar
+
+map [normal] ZZ quit
+map [normal] ZQ quit
+
+set recolor			true
+set recolor-keephue		true
+
+# vim: ft=cfg

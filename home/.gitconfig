@@ -1,0 +1,27 @@
+[user]
+	name = Joseph Hansen
+	email = 56806498+Artach-byte@users.noreply.github.com
+[init]
+	defaultBranch = main
+[color]
+	ui = auto
+[core]
+	editor = nvim
+	excludesFile = /home/joe/.gitignore
+	pager = delta
+[credential "https://github.com"]
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = !/usr/bin/gh auth git-credential
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	side-by-side = true
+	line-numbers-left-format = ""
+	line-numbers-right-format = "│ "
+	syntax-theme = gruvbox-dark
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

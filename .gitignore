@@ -1,0 +1,11 @@
+config/.config/btop/btop.log
+config/.config/ncspot/userstate.cbor
+config/.config/fish/fish_variables
+config/.config/zsh/zsh_history
+config/.config/ranger/plugins/__pycache__/
+config/.config/tmux/plugins/
+config/.config/tmux/resurrect/
+config/.config/zsh/plugins/
+home/.newsboat/cache.db
+home/.newsboat/cache.db.lock
+home/.newsboat/history.cmdline

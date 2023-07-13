@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 ################################################################################
 #                           History config                                     #
 ################################################################################
@@ -70,6 +77,9 @@ source ~/.config/zsh/plugins/zsh-z/zsh-z.plugin.zsh
 ## completion for gh-cli -> https://github.com/sudosubin/zsh-github-cli
 source ~/.config/zsh/plugins/zsh-github-cli/cli.plugin.zsh
 
+## Powerlevel10k theme
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+
 ## MUST BE LAST PLUGIN: syntax highlighting -> https://github.com/zsh-users/zsh-syntax-highlighting
 source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
@@ -78,4 +88,7 @@ source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plu
 ################################################################################
 #WARNING: keep starship prompt at bottom of file
 # starship Prompt
-eval "$(starship init zsh)"
+#eval "$(starship init zsh)"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

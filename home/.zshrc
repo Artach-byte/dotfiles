@@ -77,7 +77,7 @@ source ~/.config/zsh/plugins/zsh-z/zsh-z.plugin.zsh
 ## completion for gh-cli -> https://github.com/sudosubin/zsh-github-cli
 source ~/.config/zsh/plugins/zsh-github-cli/cli.plugin.zsh
 
-## Powerlevel10k prompt
+## Powerlevel10k prompt -> https://github.com/romkatv/powerlevel10k
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 ## MUST BE LAST PLUGIN: syntax highlighting -> https://github.com/zsh-users/zsh-syntax-highlighting

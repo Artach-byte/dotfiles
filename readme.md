@@ -1,7 +1,17 @@
-## dependencies
+## Dependencies
 - gnu stow
 - tmux
 - zsh
+    - plugins are manually added:
+        - fzf-tab : https://github.com/Aloxaf/fzf-tab
+            - fzf needs to be installed on system
+        - zsh-autosuggestions : https://github.com/zsh-users/zsh-autosuggestions
+        - zsh-autopair : https://github.com/hlissner/zsh-autopair
+        - zsh-fzf-history-search : https://github.com/joshskidmore/zsh-fzf-history-search
+        - zsh-z : https://github.com/agkozak/zsh-z
+        - completion for gh-cli : https://github.com/sudosubin/zsh-github-cli
+        - Powerlevel10k prompt : https://github.com/romkatv/powerlevel10k
+        - syntax highlighting : https://github.com/zsh-users/zsh-syntax-highlighting 
 - Terms
     - wezterm - current primary term
     - alacritty - previous used term

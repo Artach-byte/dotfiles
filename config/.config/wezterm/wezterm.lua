@@ -1,60 +1,27 @@
-local wezterm = require("wezterm")
+-- Pull in the wezterm API
+local wezterm = require 'wezterm'
 
-return {
-	default_prog = { "/usr/bin/zsh", "-l" },
-	window_decorations = "NONE",
-	font = wezterm.font_with_fallback({
-		{
-			family = "VictorMono Nerd Font",
-		},
-	}),
-	font_size = 13.0,
-	line_height = 1,
-	enable_wayland = true,
-	--color_scheme = 'nord',
-	--color_scheme = 'Gruvbox dark, medium (base16)',
-	--color_scheme = 'Everforest Dark (Gogh)',
-	color_scheme = 'Catppuccin Mocha',
+-- This table will hold the configuration.
+local config = {}
 
-	hide_tab_bar_if_only_one_tab = true,
-	tab_max_width = 16,
-	enable_scroll_bar = false,
-	initial_rows = 30,
-	initial_cols = 100,
-	enable_kitty_graphics = true,
-	window_background_opacity = 0.95,
-	window_padding = {
-		left = 0,
-		right = 0,
-		top = 0,
-		bottom = 0,
-	},
-	text_background_opacity = 1.0,
-	bold_brightens_ansi_colors = false,
-	hyperlink_rules = {
-		{
-			regex = [[\b\w+://[\w.-]+\S*\b]],
-			format = "$0",
-		},
-		{
-			regex = "\\b\\w+://[\\w.-]+\\.[a-z]{2,15}\\S*\\b",
-			format = "$0",
-		},
-		{
-			regex = [[\b\w+@[\w-]+(\.[\w-]+)+\b]],
-			format = "mailto:$0",
-		},
-		{
-			regex = [[\bfile://\S*\b]],
-			format = "$0",
-		},
-		{
-			regex = [[\b\w+://(?:[\d]{1,3}\.){3}[\d]{1,3}\S*\b]],
-			format = "$0",
-		},
-		{
-			regex = [[["]?([\w\d]{1}[-\w\d]+)(/){1}([-\w\d\.]+)["]?]],
-			format = "https://www.github.com/$1/$3",
-		},
-	},
-}
+-- In newer versions of wezterm, use the config_builder which will
+-- help provide clearer error messages
+if wezterm.config_builder then
+ config = wezterm.config_builder()
+end
+
+-- This is where you actually apply your config choices
+
+-- For example, changing the color scheme:
+config.color_scheme = 'Catppuccin Mocha'
+config.window_decorations = "NONE"
+config.default_prog = { "/usr/bin/zsh", "-l" }
+config.hide_tab_bar_if_only_one_tab = true
+config.font = wezterm.font 'VictorMono Nerd Font'
+config.font_size = 12.0
+config.window_background_opacity = 0.95
+config.enable_wayland = true
+config.enable_kitty_graphics = true
+
+-- and finally, return the configuration to wezterm
+return config

@@ -27,4 +27,5 @@
 ```bash
 git clone https://github.com/Artach-byte/dotfiles.git ~/ && cd ~/dotfiles/
 stow config && stow home
+bat cache --build # this added new themes to bat
 ```

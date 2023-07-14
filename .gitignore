@@ -6,6 +6,7 @@ config/.config/ranger/plugins/__pycache__/
 config/.config/tmux/plugins/
 config/.config/tmux/resurrect/
 config/.config/zsh/plugins/
+config/.config/ranger/plugins
 home/.newsboat/cache.db
 home/.newsboat/cache.db.lock
 home/.newsboat/history.cmdline

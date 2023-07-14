@@ -28,4 +28,5 @@
 git clone https://github.com/Artach-byte/dotfiles.git ~/ && cd ~/dotfiles/
 stow config && stow home
 bat cache --build # this added new themes to bat
+git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons #adds icons for ranger
 ```

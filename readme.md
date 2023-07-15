@@ -2,16 +2,8 @@
 - gnu stow
 - tmux
 - zsh
-    - plugins are manually added:
-        - fzf-tab : https://github.com/Aloxaf/fzf-tab
-            - fzf needs to be installed on system
-        - zsh-autosuggestions : https://github.com/zsh-users/zsh-autosuggestions
-        - zsh-autopair : https://github.com/hlissner/zsh-autopair
-        - zsh-fzf-history-search : https://github.com/joshskidmore/zsh-fzf-history-search
-        - zsh-z : https://github.com/agkozak/zsh-z
-        - completion for gh-cli : https://github.com/sudosubin/zsh-github-cli
-        - Powerlevel10k prompt : https://github.com/romkatv/powerlevel10k
-        - syntax highlighting : https://github.com/zsh-users/zsh-syntax-highlighting 
+    - plugins managed with zap : https://github.com/zap-zsh/zap
+    - prompt is powerlevel10k : https://github.com/romkatv/powerlevel10k
 - Terms
     - wezterm - current primary term
     - alacritty - previous used term
@@ -22,7 +14,7 @@
 - zathura 
 - newsboat
 
-## How to implement dotfiles with stow
+## How to implement dotfiles
 
 ```bash
 git clone https://github.com/Artach-byte/dotfiles.git ~/ && cd ~/dotfiles/

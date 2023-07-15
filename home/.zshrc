@@ -59,29 +59,18 @@ setopt autocd extendedglob nomatch notify # NOTE: I have no clue what this does
 #                                 Plugins Start                                #
 ################################################################################
 
-## MUST BE FIRST PLUGIN: fzf tab plugin -> https://github.com/Aloxaf/fzf-tab
-source ~/.config/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
-
-## zsh-autosuggestions -> https://github.com/zsh-users/zsh-autosuggestions
-source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-
-## zsh-autopair -> https://github.com/hlissner/zsh-autopair
-source ~/.config/zsh/plugins/zsh-autopair/zsh-autopair.plugin.zsh
-
-## zsh-fzf-history-search -> https://github.com/joshskidmore/zsh-fzf-history-search
-source ~/.config/zsh/plugins/zsh-fzf-history-search/zsh-fzf-history-search.plugin.zsh
-
-## zsh-z -> https://github.com/agkozak/zsh-z
-source ~/.config/zsh/plugins/zsh-z/zsh-z.plugin.zsh
-
-## completion for gh-cli -> https://github.com/sudosubin/zsh-github-cli
-source ~/.config/zsh/plugins/zsh-github-cli/cli.plugin.zsh
-
-## Powerlevel10k prompt -> https://github.com/romkatv/powerlevel10k
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-
-## MUST BE LAST PLUGIN: syntax highlighting -> https://github.com/zsh-users/zsh-syntax-highlighting
-source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+# Created by Zap installer
+[ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
+plug "zsh-users/zsh-autosuggestions"
+plug "zap-zsh/supercharge"
+plug "zap-zsh/zap-prompt"
+plug "zsh-users/zsh-syntax-highlighting"
+plug "Aloxaf/fzf-tab"
+plug "hlissner/zsh-autopair"
+plug "joshskidmore/zsh-fzf-history-search"
+plug 'agkozak/zsh-z'
+plug 'sudosubin/zsh-github-cli'
+plug 'romkatv/powerlevel10k'
 
 ################################################################################
 #                              Plugins End                                     #

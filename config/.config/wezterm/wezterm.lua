@@ -14,7 +14,7 @@ end
 
 -- For example, changing the color scheme:
 config.color_scheme = 'Catppuccin Mocha'
-config.window_decorations = "NONE"
+--config.window_decorations = "NONE"
 config.default_prog = { "/usr/bin/zsh", "-l" }
 config.hide_tab_bar_if_only_one_tab = true
 config.font = wezterm.font 'BlexMono Nerd Font Mono'

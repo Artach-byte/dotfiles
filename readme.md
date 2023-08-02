@@ -1,12 +1,20 @@
-# Dependencies
-- gnu stow is needed to manage dotfiles and symlinks
+# About
+## System
+- Distro -> Opensuse tumbleweed
+- Desktop environment -> KDE plasma
+- system theme -> catppuccin -> https://github.com/catppuccin/catppuccin
 
-## CLI Tools
+## Dependencies for implementing dotfiles
+- gnu stow
+    - needed to manage dotfiles and symlinks
+
+## CLI
 
 ### Shell
 - zsh
     - plugins managed with zap : https://github.com/zap-zsh/zap
     - prompt is powerlevel10k : https://github.com/romkatv/powerlevel10k
+    - fzf is a requiremnt
 
 ### git
 - Lazygit for cli/tui -> https://github.com/jesseduffield/lazygit
@@ -23,6 +31,7 @@
 ### Text editor
 - Neovim
     - astronvim for easy config -> https://astronvim.com/
+        - personal user config -> https://github.com/Artach-byte/astro-nvim-config
 
 ### Misc
 - newsboat for rss feeds -> https://newsboat.org/
@@ -34,7 +43,7 @@
 - tmux
   - tpm for plugin managment -> https://github.com/tmux-plugins/tpm
 
-## GUI Tools
+## GUI
 
 ### Terminal
 - wezterm -> https://wezfurlong.org/wezterm/index.html

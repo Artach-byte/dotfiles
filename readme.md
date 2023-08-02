@@ -14,7 +14,7 @@
 - zsh
     - plugins managed with zap : https://github.com/zap-zsh/zap
     - prompt is powerlevel10k : https://github.com/romkatv/powerlevel10k
-    - fzf is a requiremnt
+    - fzf is a requirement for fzf-zsh plugin
 
 ### git
 - Lazygit for cli/tui -> https://github.com/jesseduffield/lazygit

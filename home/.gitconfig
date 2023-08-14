@@ -19,7 +19,7 @@
 	side-by-side = true
 	line-numbers-left-format = ""
 	line-numbers-right-format = "│ "
-	syntax-theme = gruvbox-dark
+	syntax-theme = --theme="Catppuccin-mocha"
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

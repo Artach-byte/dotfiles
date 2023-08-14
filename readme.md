@@ -1,7 +1,7 @@
 # About
 ## System
-- Distro -> Opensuse tumbleweed
-- Desktop environment -> KDE plasma
+- Distro -> pop!_os
+- Desktop environment -> gnome with pop-shell
 - system theme -> catppuccin -> https://github.com/catppuccin/catppuccin
 
 ## Dependencies for implementing dotfiles

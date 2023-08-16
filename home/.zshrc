@@ -70,6 +70,7 @@ plug "hlissner/zsh-autopair"
 plug "joshskidmore/zsh-fzf-history-search"
 plug 'agkozak/zsh-z'
 plug 'sudosubin/zsh-github-cli'
+plug 'ael-code/zsh-colored-man-pages'
 plug 'romkatv/powerlevel10k'
 
 ################################################################################

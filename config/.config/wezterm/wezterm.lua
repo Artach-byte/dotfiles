@@ -19,7 +19,7 @@ config.default_prog = { "/usr/bin/zsh", "-l" }
 config.hide_tab_bar_if_only_one_tab = true
 config.font = wezterm.font 'BlexMono Nerd Font Mono'
 config.font_size = 14.0
-config.window_background_opacity = 0.95
+config.window_background_opacity = 0.75
 config.enable_wayland = true
 config.enable_kitty_graphics = true
 

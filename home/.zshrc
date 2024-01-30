@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 ################################################################################
 #                           History config                                     #
 ################################################################################
@@ -71,14 +64,11 @@ plug "joshskidmore/zsh-fzf-history-search"
 plug 'agkozak/zsh-z'
 plug 'sudosubin/zsh-github-cli'
 plug 'ael-code/zsh-colored-man-pages'
-plug 'romkatv/powerlevel10k'
 
 ################################################################################
 #                              Plugins End                                     #
 ################################################################################
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+eval "$(starship init zsh)"
 
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc

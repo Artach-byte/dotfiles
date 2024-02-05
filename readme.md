@@ -1,90 +1,80 @@
 # About
 ## System
-- Distro -> pop!_os
-- Desktop environment -> gnome with pop-shell
+- Distro -> Nobara Linux (fedora spin)
+- Desktop environment -> KDE Wayland
 - system theme -> catppuccin -> https://github.com/catppuccin/catppuccin
 
 ## Dependencies for implementing dotfiles
 - gnu stow
     - needed to manage dotfiles and symlinks
 
-## CLI
+### CLI
 
-### Shell
+#### Shell
 - zsh
     - plugins managed with zap : https://github.com/zap-zsh/zap
     - prompt is powerlevel10k : https://github.com/romkatv/powerlevel10k
     - fzf is a requirement for fzf-zsh plugin
 
-### git
+#### git
 - Lazygit for cli/tui -> https://github.com/jesseduffield/lazygit
 - git-delta for cli diff visualization -> https://github.com/dandavison/delta
     - bat needed for colorscheme in git-dlta -> https://github.com/sharkdp/bat
 - gh-cli -> https://cli.github.com/
 
-### Filemanger
+#### Filemanger
 - ranger
     - bat for text preview
     - ranger devicons -> https://github.com/alexanderjeurissen/ranger_devicons
     - wezterm is needed for img preview
 
-### Text editor
+#### Text editor
 - Neovim
     - astronvim for easy config -> https://astronvim.com/
         - personal user config -> https://github.com/Artach-byte/astro-nvim-config
 
-### Misc
+#### Misc
 - newsboat for rss feeds -> https://newsboat.org/
 - nvtop for gpu monitoring -> https://github.com/Syllo/nvtop
 - btop for system monitoring -> https://github.com/aristocratos/btop
 - qemu/kvm for virtual machines
 
-### Terminal Multiplexer
+#### Terminal Multiplexer
 - tmux
   - tpm for plugin managment -> https://github.com/tmux-plugins/tpm
 
-## GUI
+### GUI
 
-### Terminal
+#### Terminal
 - wezterm -> https://wezfurlong.org/wezterm/index.html
 
-### Browser
-- Firefox
-    - Extensions used
-        - ublock origin
-        - darkreader
-        - stylus
-        - augmented steam
-        - refined github
-        - awesome rss
-### Communication
-- thunderbird for email/rss -> https://www.thunderbird.net/en-US/
-    - Extensions used:
-        - dark reader
-        - ublock origin
+#### Browser
+- Floorp -> a firefox spin
+
+#### Communication
+- mailspring 
 - discord
 - zoom
 
-### Text editor
+#### Text editor
 - VS Code -> https://code.visualstudio.com/
 
-### Note taking
-- Obsidian -> https://obsidian.md/
+#### Note taking
+- joplin notes
 
-### Media
+#### Media
 - okular for pdfs
 - calibre for ebooks
-- mpv for videos
+- vlc for videos
 - spotify for music/podcasts
-- Komikku for manga -> https://gitlab.com/valos/Komikku
 
-### Game stuff
+#### Game stuff
 - Steam
 - Lutris
 - heroic games luancher
 - protonup-qt for custom proton
 
-### Misc
+#### Misc
 - corectrl for gpu -> https://gitlab.com/corectrl/corectrl
 - openrgb -> https://openrgb.org/ 
 - cooler control for fans/aio -> https://gitlab.com/coolercontrol/coolercontrol

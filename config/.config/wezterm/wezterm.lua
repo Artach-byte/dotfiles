@@ -14,12 +14,12 @@ end
 
 -- For example, changing the color scheme:
 config.color_scheme = 'Catppuccin Mocha'
---config.window_decorations = "NONE"
+config.window_decorations = "NONE"
 config.default_prog = { "/usr/bin/zsh", "-l" }
 config.hide_tab_bar_if_only_one_tab = true
 config.font = wezterm.font 'BlexMono Nerd Font Mono'
 config.font_size = 14.0
-config.window_background_opacity = 0.75
+config.window_background_opacity = 0.85
 config.enable_wayland = true
 config.enable_kitty_graphics = true
 

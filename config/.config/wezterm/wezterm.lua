@@ -1,27 +1,47 @@
--- Pull in the wezterm API
-local wezterm = require 'wezterm'
+--- wezterm.lua
+--- $ figlet -f small Wezterm
+--- __      __      _
+--- \ \    / /__ __| |_ ___ _ _ _ __
+---  \ \/\/ / -_)_ /  _/ -_) '_| '  \
+---   \_/\_/\___/__|\__\___|_| |_|_|_|
+---
+--- My Wezterm config file
 
--- This table will hold the configuration.
+local wezterm = require("wezterm")
+local act = wezterm.action
+
+
 local config = {}
+-- Use config builder object if possible
+if wezterm.config_builder then config = wezterm.config_builder() end
 
--- In newer versions of wezterm, use the config_builder which will
--- help provide clearer error messages
-if wezterm.config_builder then
- config = wezterm.config_builder()
-end
-
--- This is where you actually apply your config choices
-
--- For example, changing the color scheme:
-config.color_scheme = 'Catppuccin Mocha'
-config.window_decorations = "NONE"
+-- Settings
 config.default_prog = { "/usr/bin/zsh", "-l" }
-config.hide_tab_bar_if_only_one_tab = true
-config.font = wezterm.font 'BlexMono Nerd Font Mono'
-config.font_size = 14.0
-config.window_background_opacity = 0.80
+
+config.color_scheme = "Catppuccin Mocha"
+config.font = wezterm.font_with_fallback({
+  --{ family = "Iosevka Nerd Font",  scale = 1.24, weight = "Medium", },
+  { family = "CaskaydiaCove Nerd Font",  scale = 1.2 },
+})
+config.window_background_opacity = 0.9
+config.window_decorations = "RESIZE"
+config.window_close_confirmation = "AlwaysPrompt"
+config.scrollback_lines = 3000
+config.default_workspace = "main"
+
+-- Dim inactive panes
+config.inactive_pane_hsb = {
+  saturation = 0.24,
+  brightness = 0.5
+}
 config.enable_wayland = true
 config.enable_kitty_graphics = true
 
+-- Tab bar
+-- I don't like the look of "fancy" tab bar
+config.use_fancy_tab_bar = false
+config.status_update_interval = 1000
+config.tab_bar_at_bottom = false
+config.hide_tab_bar_if_only_one_tab = true
 -- and finally, return the configuration to wezterm
 return config

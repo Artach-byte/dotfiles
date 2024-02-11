@@ -40,6 +40,9 @@ setopt PROMPT_SUBST         # If set, parameter expansion, command substitution 
 setopt PUSHD_IGNORE_DUPS    # Do not store duplicates in the stack.
 setopt PUSHD_SILENT         # Do not print the directory stack after pushd or popd.
 
+# Path for cargo
+export PATH=/home/joe/.cargo/bin/:$PATH
+
 # remove vi mode
 bindkey -e
 

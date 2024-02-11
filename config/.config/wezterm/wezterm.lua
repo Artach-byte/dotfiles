@@ -23,7 +23,7 @@ config.font = wezterm.font_with_fallback({
   --{ family = "Iosevka Nerd Font",  scale = 1.24, weight = "Medium", },
   { family = "CaskaydiaCove Nerd Font",  scale = 1.2 },
 })
-config.window_background_opacity = 0.9
+config.window_background_opacity = 1
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "AlwaysPrompt"
 config.scrollback_lines = 3000
@@ -35,7 +35,6 @@ config.inactive_pane_hsb = {
   brightness = 0.5
 }
 config.enable_wayland = true
-config.enable_kitty_graphics = true
 
 -- Tab bar
 -- I don't like the look of "fancy" tab bar

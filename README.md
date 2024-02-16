@@ -3,7 +3,7 @@
   <a href="https://www.npmjs.com/package/dotfiles" target="_blank">
     <img alt="Version" src="https://img.shields.io/npm/v/dotfiles.svg">
   </a>
-  <a href="#" target="_blank">
+  <a href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank">
     <img alt="License: AGPL--3.0" src="https://img.shields.io/badge/License-AGPL--3.0-yellow.svg" />
   </a>
 </p>

@@ -36,6 +36,7 @@ git clone https://github.com/alexanderjeurissen/ranger_devicons /home/$USER/.con
 - gh-cli -> https://cli.github.com/
 - ranger
  - ranger devicons -> https://github.com/alexanderjeurissen/ranger_devicons
+ - trash-cli -> https://github.com/andreafrancia/trash-cli
 - bat for text preview
 - Neovim
     - astronvim for easy config -> https://astronvim.com/
@@ -47,7 +48,6 @@ git clone https://github.com/alexanderjeurissen/ranger_devicons /home/$USER/.con
 - lact for gpu config -> https://github.com/ilya-zlobintsev/LACT
 - openrgb -> https://openrgb.org/ 
 - cooler control for fans/aio -> https://gitlab.com/coolercontrol/coolercontrol
-
 
 ## Author
 

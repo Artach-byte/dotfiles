@@ -13,19 +13,19 @@
 ## Install
 
 ```sh
-stow config && stow home
+git clone https://github.com/Artach-byte/dotfiles.git /home/$USER/dotfiles && cd /home/$USER/dotfiles
 ```
 
 ## Usage
 
 ```sh
-git clone https://github.com/Artach-byte/dotfiles.git /home/$USER/dotfiles && cd /home/$USER/dotfiles
-stow config && stow home
+stow config && stow home # in dotfile dir
 bat cache --build # this added new themes to bat
 git clone https://github.com/alexanderjeurissen/ranger_devicons /home/$USER/.config/ranger/plugins/ranger_devicons #adds icons for ranger
 ```
 
 ## Programs Used
+
 - zsh
     - plugins managed with zap : https://github.com/zap-zsh/zap
     - prompt is powerlevel10k : https://github.com/romkatv/powerlevel10k

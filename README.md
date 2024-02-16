@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to dotfiles 👋</h1>
+<h1 align="center">Welcome to my dotfiles 👋</h1>
 <p>
   <a href="https://www.npmjs.com/package/dotfiles" target="_blank">
     <img alt="Version" src="https://img.shields.io/npm/v/dotfiles.svg">
@@ -8,7 +8,7 @@
   </a>
 </p>
 
-> My dotfile configs
+> My dotfile configs for linux and program reminder.
 
 ## Install
 

@@ -18,8 +18,9 @@
 [delta]
 	side-by-side = true
 	line-numbers-left-format = ""
-	line-numbers-right-format = "│ "
-	syntax-theme = --theme="Catppuccin-mocha"
+	line-numbers-right-format = "│"
+	path = /home/joe/delta/themes/mocha.gitconfig
+	features = catppuccin-mocha
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

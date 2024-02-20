@@ -12,3 +12,4 @@ config/.config/OpenRGB/plugins
 home/.newsboat/cache.db
 home/.newsboat/cache.db.lock
 home/.newsboat/history.cmdline
+config/.config/bat/syntaxes/

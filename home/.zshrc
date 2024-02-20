@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 ################################################################################
 #                           History config                                     #
 ################################################################################
@@ -61,7 +54,6 @@ setopt autocd extendedglob nomatch notify # NOTE: I have no clue what this does
 ################################################################################
 #                                 Plugins Start                                #
 ################################################################################
-source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # Created by Zap installer
 [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
@@ -79,10 +71,7 @@ plug 'ael-code/zsh-colored-man-pages'
 ################################################################################
 #                              Plugins End                                     #
 ################################################################################
-##eval "$(starship init zsh)"
+eval "$(starship init zsh)"
 
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

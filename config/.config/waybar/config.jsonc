@@ -1,0 +1,144 @@
+{
+"modules-left":[
+    "sway/workspaces",
+    "idle_inhibitor",
+    "custom/cava-internal",
+    "sway/mode"
+    ],
+
+"modules-center":[
+    "custom/weather",
+    "clock"
+],
+
+"modules-right": [
+    "pulseaudio",
+    "disk",
+    "memory",
+    "cpu", 
+    "network",
+    "battery",
+    "tray",
+    "custom/powermenu"
+
+  ],
+
+//modules-right//
+
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "󰈈",
+      "deactivated": "󰈉"
+    },
+    "tooltip": false
+  },
+
+"custom/cava-internal": {
+    "exec": "~/.config/waybar/Cava_internal.sh",
+    "tooltip": false
+  },
+
+"sway/mode": {
+  "format": " {}"
+  },
+
+"sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{icon}",
+    "format-icons": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "urgent": "",
+        "focused": "",
+        "default": ""
+    },
+    "persistent-workspaces": {
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": [],
+        "5": []
+    }
+},
+//modules-center//
+"custom/weather": {
+    "format": "{}",
+    "tooltip": true,
+    "interval": 3600,
+    "exec": "python ~/.config/waybar/wabar-wttr.py",
+    "return-type": "json"
+  },
+
+"clock": {
+    "interval": 1,
+    "format": "{:%I:%M %p  %A %b %d}",
+    "tooltip": true,
+    "tooltip-format": "{:%A, %d %B %Y}\n<tt>{calendar}</tt>"
+  },
+//modules-left//
+
+"disk": {
+    "interval": 30,
+    "format": " {used}",
+    "path": "/home",
+    "tooltip": true,
+    "tooltip-format": "{used}/{total} => {path} {percentage_used}%",
+},
+
+"memory": {
+    "on-click": "wezterm btm",
+    "interval": 1,
+    "format": " {percentage}%",
+    "states": {
+      "warning": 85,
+    },
+  },
+"cpu": {
+    "interval": 1,
+    "format": " {usage}%"
+  },
+
+
+  "pulseaudio": {
+    "scroll-step": 1,
+    "format": "{icon} {volume}%",
+    "format-muted": "󰖁",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "pavucontrol"
+},
+
+"tray": {
+    "icon-size": 15,
+    "spacing": 5
+  },
+
+    "custom/powermenu": {
+    "format": " ",
+    "on-click": "exec wlogout",
+    "tooltip": false
+  },
+
+"network": {
+    "format": "{ifname}",
+    "format-wifi": " ",
+    "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+    "format-disconnected": "", //An empty format will hide the module.
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+}
+
+}

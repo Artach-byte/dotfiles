@@ -9,7 +9,7 @@
 
 #include themes/nord
 #include themes/gruvbox
-include themes/catppuccin-frappe
+include themes/catppuccin-mocha
 
 
 set selection-clipboard clipboard

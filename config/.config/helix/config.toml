@@ -1,9 +1,16 @@
 theme = "catppuccin_mocha"
 
 [editor]
-line-number = "relative"
-cursorline = true
+auto-format = true
+bufferline = "multiple"
 color-modes = true
+completion-replace = true
+cursorcolumn = false
+cursorline = true
+line-number = "relative"
+mouse = false
+rulers = [79]
+true-color = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -12,6 +19,36 @@ select = "underline"
 
 [editor.indent-guides]
 render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "╎"
+skip-levels = 0
 
 [editor.file-picker]
 hidden = false
+
+[editor.statusline]
+left = [
+  "mode",
+  "spacer",
+  "version-control",
+  "spacer",
+  "separator",
+  "file-name",
+  "file-modification-indicator"
+]
+right = [
+  "spinner",
+  "spacer",
+  "workspace-diagnostics",
+  "separator",
+  "spacer",
+  "diagnostics",
+  "position",
+  "file-encoding",
+  "file-line-ending",
+  "file-type"
+]
+separator = "╎"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+

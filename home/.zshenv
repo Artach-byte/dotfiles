@@ -2,8 +2,9 @@ typeset -U path
 
 # Defualt Apps
 export PAGER="less"
-export EDITOR="hx"
-export VISUAL="hx"
+export EDITOR="nvim"
+export VISUAL="nvim"
+export READER="zathura"
 
 #path
 path=(/usr/local/bin $path)

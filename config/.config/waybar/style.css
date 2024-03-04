@@ -3,7 +3,7 @@
 /* Global */
 * {
   font-family: "FiraCode Nerd Font";
-  font-size: .9rem;
+  font-size: 1rem;
   border-radius: 1rem;
   transition-property: background-color;
   transition-duration: 0.5s;
@@ -26,8 +26,8 @@
 }
 
 #mode, #clock, #memory, #temperature, #cpu, #custom-weather,
-#mpd, #idle_inhibitor, #backlight, #pulseaudio, #network, 
-#battery, #custom-powermenu, #custom-cava-internal,
+#mpris, #idle_inhibitor, #backlight, #pulseaudio, #network, 
+#battery, #custom-powermenu, #custom-cava-internal, #bluetooth,
 #custom-launcher, #tray, #disk, #custom-pacman, #custom-scratchpad-indicator {
   padding-left: .6rem;
   padding-right: .6rem;
@@ -97,16 +97,16 @@ tooltip label {
   color: @red;
 }
 
-/* mpd */
-#mpd.paused {
+/* mpris */
+#mpris.paused {
   color: @pink;
   font-style: italic;
 }
-#mpd.stopped {
+#mpris.stopped {
   color: @rosewater;
   /* background: transparent; */
 }
-#mpd {
+#mpris {
   color: @lavender;
 }
 
@@ -143,6 +143,12 @@ tooltip label {
   color: @pink; /* not active */
 }
 #network.disconnected {
+  color: @foreground;  /* not active */
+}
+#bluetooth {
+  color: @blue; /* not active */
+}
+#bluetooth.disconnected {
   color: @foreground;  /* not active */
 }
 #disk {

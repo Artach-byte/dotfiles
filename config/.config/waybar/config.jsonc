@@ -6,13 +6,13 @@
     "custom/launcher",
     "sway/workspaces",
    //"idle_inhibitor",
-    "mpris",
+  "mpris",
     "custom/cava-internal",
     "sway/mode"
 ],
 
 "modules-center":[
-    "custom/weather",
+    //"custom/weather",
     "clock"
 ],
 
@@ -97,7 +97,7 @@
 "custom/weather": {
     "format": "{} °",
     "tooltip": true,
-    "interval": 3600,
+    "interval": 960,
     "exec": "~/.cargo/bin/wttrbar --ampm --fahrenheit --date-format '%m/%d' ",
     "return-type": "json"
 },
@@ -111,19 +111,23 @@
 
 //modules-left//
 
-"pulseaudio": {
-    "scroll-step": 1,
-    "format": "{icon} {volume}%",
-    "format-muted": "",
-    "format-icons": {
-      "default": [
-        "",
-        "󰕿",
-        "󰕾"
-      ]
-    },
-    "on-click": "pavucontrol"
-},
+        "pulseaudio": {
+            "scroll-step": 1,
+            "format": "{icon} {volume}%{format_source}",
+            "format-bluetooth": "{icon} {volume}%{format_source}",
+            "format-bluetooth-muted": " {icon}{format_source}",
+            "format-muted": "󰖁 {format_source}",
+            "format-source": "  {volume}%",
+            "format-source-muted": " ",
+            "format-icons": {
+                "headphone": "",
+                "phone": "",
+                "portable": "",
+                "car": "",
+                "default": ["", "", ""]
+            },
+            "on-click": "pavucontrol"
+        },
 
 "disk": {
     "interval": 30,

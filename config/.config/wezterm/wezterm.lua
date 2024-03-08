@@ -1,12 +1,3 @@
---- wezterm.lua
---- $ figlet -f small Wezterm
---- __      __      _
---- \ \    / /__ __| |_ ___ _ _ _ __
----  \ \/\/ / -_)_ /  _/ -_) '_| '  \
----   \_/\_/\___/__|\__\___|_| |_|_|_|
----
---- My Wezterm config file
-
 local wezterm = require("wezterm")
 local act = wezterm.action
 
@@ -37,7 +28,6 @@ config.inactive_pane_hsb = {
 config.enable_wayland = true
 
 -- Tab bar
--- I don't like the look of "fancy" tab bar
 config.use_fancy_tab_bar = false
 config.status_update_interval = 1000
 config.tab_bar_at_bottom = false

@@ -1,14 +1,14 @@
 include catppuccin-mocha
 
-exec swaync
-#exec mako
-exec waybar
-exec_always gammastep
+#exec swaync
+exec mako
+exec_always 'pkill waybar; waybar'
 exec corectrl
+exec autotiling
 
 font pango:FireCode Nerd Font Regular 4px
 
-default_border pixel 1
+default_border pixel 2
 gaps inner  5
 gaps outer  5
 smart_borders on
@@ -25,13 +25,14 @@ set $right l
 set $term wezterm
 set $menu fuzzel | xargs swaymsg exec -- 
 set $file-manager thunar
+set $browser flatpak run one.ablaze.floorp
 
-bindsym $mod+x exec keepassxc
+#bindsym $mod+x exec
 bindsym $mod+d exec $menu
 bindsym $mod+w exec $browser
 bindsym $mod+r exec $file-manager
 bindsym $mod+Return exec $term
-bindsym $mod+Shift+Return exec wezterm --class="termfloat"
+#bindsym $mod+Shift+Return exec wezterm --class="termfloat"
 #bindsym $mod+Shift+e exec bemoji
 
 bindsym $mod+Shift+r reload
@@ -57,14 +58,16 @@ bindsym XF86AudioPrev exec playerctl previous
 
 bindsym $mod+Shift+n exec swaync-client -t -sw
 
-output * adaptive_sync off
+output * {
+mode 2560x1440@144.000Hz
+}
 
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # Requires: desktop-backgrounds-compat, swaybg
-output * bg ~/Pictures/wallpapers/catppuccin/one_peice.jpg fill
+output * bg ~/Pictures/wallpapers/wallpapers/tux-frappe.png fit
 #
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
@@ -80,10 +83,10 @@ seat seat0 xcursor_theme Catppuccin-Mocha-Dark-Cursors
 # }
 
 # target                 title     bg    text   indicator  border
-client.focused           $pink     $base $text  $rosewater $mauve
-client.focused_inactive  $mauve    $base $text  $rosewater $mauve
+client.focused           $pink     $base $text  $mauve $mauve
+client.focused_inactive  $mauve    $base $text  $rosewater $base
 client.unfocused         $mauve    $base $text  $rosewater $base
-client.urgent            $peach    $base $peach $overlay0  $peach
+client.urgent            $peach    $base $peach $overlay0  $base
 client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
 client.background        $base
 
@@ -96,6 +99,12 @@ client.background        $base
     input "type:keyboard" {           
         xkb_layout us
         xkb_options ctrl:nocaps
+    }
+
+    input type:pointer {
+    accel_profile "flat"
+    pointer_accel 0
+    scroll_factor 1.5
     }
 
 # Drag floating windows by holding down $mod and left mouse button.

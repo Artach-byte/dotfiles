@@ -1,6 +1,6 @@
 # Theme
 theme = catppuccin-mocha
-# background-opacity = 0.9
+background-opacity = 0.95
 
 # Font
 font-family = Iosevka Nerd Font

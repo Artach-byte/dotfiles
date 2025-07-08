@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 #!/usr/bin/env bash
 ################################################################################
 #                           History config                                     #
@@ -53,32 +60,29 @@ source ~/.config/zsh/aliases.zsh
 ## fzf theme config
 source ~/.config/zsh/fzf-themes.zsh
 
-setopt autocd extendedglob nomatch notify # NOTE: I have no clue what this does
-
 ################################################################################
 #                                 Plugins Start                                #
 ################################################################################
 
 # Created by Zap installer
 [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
+plug 'Aloxaf/fzf-tab'
 plug "zsh-users/zsh-autosuggestions"
-plug "zap-zsh/supercharge"
-plug "zap-zsh/zap-prompt"
+plug "romkatv/powerlevel10k"
 plug "zsh-users/zsh-syntax-highlighting"
-plug "Aloxaf/fzf-tab"
 plug "hlissner/zsh-autopair"
-#plug "joshskidmore/zsh-fzf-history-search"
-plug 'agkozak/zsh-z'
 plug 'sudosubin/zsh-github-cli'
 plug '3v1n0/zsh-bash-completions-fallback'
-#plug 'MohamedElashri/eza-zsh'
 plug 'bilelmoussaoui/flatpak-zsh-completion'
 
 ################################################################################
 #                              Plugins End                                     #
 ################################################################################
+zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
 eval "$(atuin init zsh)"
-eval "$(starship init zsh)"
 
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

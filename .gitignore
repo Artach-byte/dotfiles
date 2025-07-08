@@ -14,3 +14,4 @@ home/.newsboat/cache.db.lock
 home/.newsboat/history.cmdline
 config/.config/bat/syntaxes/
 config/.config/corectrl/corectrl.ini
+config/.config/helix/runtime/

@@ -6,7 +6,7 @@
 [color]
 	ui = auto
 [core]
-	editor = nvim
+	editor = hx
 	excludesFile = /home/joe/.gitignore
 	pager = delta
 [credential "https://github.com"]

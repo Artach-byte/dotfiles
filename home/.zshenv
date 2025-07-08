@@ -1,9 +1,11 @@
+#!/usr/bin/env bash
+
 typeset -U path
 
 # Defualt Apps
 export PAGER="less"
-export EDITOR="nvim"
-export VISUAL="nvim"
+export EDITOR="hx"
+export VISUAL="hx"
 export READER="zathura"
 
 #path

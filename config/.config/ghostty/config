@@ -1,0 +1,18 @@
+# Theme
+theme = catppuccin-mocha
+# background-opacity = 0.9
+
+# Font
+font-family = Iosevka Nerd Font
+font-size = 14
+
+# Shell
+command = /home/linuxbrew/.linuxbrew/bin/zsh --login --interactive
+shell-integration = zsh
+
+# Misc
+mouse-hide-while-typing = true
+
+# Keybinds
+keybind = ctrl+comma=open_config
+keybind = ctrl+shift+comma=reload_config

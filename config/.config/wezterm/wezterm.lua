@@ -7,7 +7,7 @@ local config = {}
 if wezterm.config_builder then config = wezterm.config_builder() end
 
 -- Settings
-config.default_prog = { "/usr/bin/zsh", "-l" }
+config.default_prog = { "/home/linuxbrew/.linuxbrew/bin/zsh", "-l" }
 
 config.color_scheme = "Catppuccin Mocha"
 config.font = wezterm.font_with_fallback({

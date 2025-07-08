@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Aliases for ZSH
 alias zshreload='source ~/.zshrc' # reload ZSH
 
@@ -9,11 +11,11 @@ alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
 
 # ls
-alias ls='ls --color'
+alias ls="yazi"
 
-# Eza
-alias l="eza -l --icons --git -a"
-alias lt="eza --tree --level=2 --long --icons --git"
+# # Eza
+# alias l="eza -l --icons --git -a"
+# alias lt="eza --tree --level=2 --long --icons --git"
 
 # lazygit
 alias lg='lazygit'

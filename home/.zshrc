@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 ################################################################################
 #                           History config                                     #
 ################################################################################
@@ -36,6 +37,9 @@ setopt PUSHD_SILENT         # Do not print the directory stack after pushd or po
 # Path for cargo
 export PATH=/home/joe/.cargo/bin/:$PATH
 
+# Path for Brew
+export PATH=/home/linuxbrew/.linuxbrew/bin/:$PATH
+
 # remove vi mode
 bindkey -e
 
@@ -63,13 +67,17 @@ plug "zap-zsh/zap-prompt"
 plug "zsh-users/zsh-syntax-highlighting"
 plug "Aloxaf/fzf-tab"
 plug "hlissner/zsh-autopair"
-plug "joshskidmore/zsh-fzf-history-search"
+#plug "joshskidmore/zsh-fzf-history-search"
 plug 'agkozak/zsh-z'
 plug 'sudosubin/zsh-github-cli'
+plug '3v1n0/zsh-bash-completions-fallback'
+#plug 'MohamedElashri/eza-zsh'
+plug 'bilelmoussaoui/flatpak-zsh-completion'
 
 ################################################################################
 #                              Plugins End                                     #
 ################################################################################
+eval "$(atuin init zsh)"
 eval "$(starship init zsh)"
 
 zstyle ':completion:*' menu select

@@ -7,18 +7,17 @@ local config = {}
 if wezterm.config_builder then config = wezterm.config_builder() end
 
 -- Settings
-config.default_prog = { "/home/linuxbrew/.linuxbrew/bin/zsh", "-l" }
+config.default_prog = { "/usr/bin/fish", "-l" }
 
-config.color_scheme = "Catppuccin Mocha"
-config.font = wezterm.font_with_fallback({
-  { family = "Iosevka Nerd Font",  scale = 1.24, weight = "Medium", },
-  { family = "CaskaydiaCove Nerd Font",  scale = 1.2 },
-})
+config.color_scheme = "catppuccin-mocha"
+config.font = wezterm.font ('Iosevka Nerd Font')
 config.window_background_opacity = 0.95
+config.font_size = 13
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "AlwaysPrompt"
 config.scrollback_lines = 3000
 config.default_workspace = "main"
+config.hide_mouse_cursor_when_typing = true
 
 -- Dim inactive panes
 config.inactive_pane_hsb = {

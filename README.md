@@ -8,8 +8,6 @@
   </a>
 </p>
 
-> My dotfile configs for linux and program reminder.
-
 ## Install
 
 ```sh

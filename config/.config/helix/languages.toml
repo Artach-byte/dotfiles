@@ -1,3 +1,6 @@
+[language-server]
+bash-language-server = { command = "bash-language-server", args = ["start"] }
+
 [[language]]
 name = "json"
 auto-format = false
@@ -7,13 +10,89 @@ name = "toml"
 
 [[language]]
 name = "bash"
+scope = "source.bash"
+injection-regex = "(shell|bash|zsh|sh)"
+file-types = [
+  "sh",
+  "bash",
+  "ash",
+  "dash",
+  "ksh",
+  "mksh",
+  "zsh",
+  "zshenv",
+  "zlogin",
+  "zlogout",
+  "zprofile",
+  "zshrc",
+  "eclass",
+  "ebuild",
+  "bazelrc",
+  "Renviron",
+  "zsh-theme",
+  "cshrc",
+  "tcshrc",
+  "bashrc_Apple_Terminal",
+  "zshrc_Apple_Terminal",
+  { glob = "i3/config" },
+  { glob = "sway/config" },
+  { glob = "tmux.conf" },
+  { glob = ".bash_history" },
+  { glob = ".bash_login" },
+  { glob = ".bash_logout" },
+  { glob = ".bash_profile" },
+  { glob = ".bashrc" },
+  { glob = ".profile" },
+  { glob = ".zshenv" },
+  { glob = ".zlogin" },
+  { glob = ".zlogout" },
+  { glob = ".zprofile" },
+  { glob = ".zshrc" },
+  { glob = ".zimrc" },
+  { glob = "APKBUILD" },
+  { glob = ".bash_aliases" },
+  { glob = ".Renviron" },
+  { glob = ".xprofile" },
+  { glob = ".xsession" },
+  { glob = ".xsessionrc" },
+  { glob = ".yashrc" },
+  { glob = ".yash_profile" },
+  { glob = ".hushlogin" },
+]
+shebangs = ["sh", "bash", "dash", "zsh"]
+comment-token = "#"
+language-servers = [ "bash-language-server" ]
+indent = { tab-width = 2, unit = "  " }
 
-[[language]]
-name = "php"
-
-[[language]]
-name = "html"
-
-[[languages]]
+[[grammar]]
 name = "bash"
-file-types = ["sh", "bash", ".functions"]
+source = { git = "https://github.com/tree-sitter/tree-sitter-bash", rev = "487734f87fd87118028a65a4599352fa99c9cde8" }
+
+[[language]]
+name = "ini"
+scope = "source.ini"
+file-types = [
+  "ini",
+  "desktop",
+  { glob = "mimeapps.list" },
+  # Podman quadlets
+  "container",
+  "volume",
+  "kube",
+  "network",
+  { glob = ".editorconfig" },
+  { glob = ".npmrc" },
+  { glob = "hgrc" },
+  { glob = "npmrc" },
+  { glob = "rclone.conf" },
+  "properties",
+  "cfg",
+  "directory"
+]
+injection-regex = "ini"
+comment-token = "#"
+indent = { tab-width = 4, unit = "\t" }
+
+[[grammar]]
+name = "ini"
+source = { git = "https://github.com/justinmk/tree-sitter-ini", rev = "32b31863f222bf22eb43b07d4e9be8017e36fb31" }

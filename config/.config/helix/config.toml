@@ -25,30 +25,19 @@ skip-levels = 0
 [editor.file-picker]
 hidden = false
 
+# [editor.statusline]
+# left = ["mode", "spinner", "file-name", "file-modification-indicator"]
+# right = ["version-control", "diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+# separator = "|"
+# mode.normal = "NORMAL"
+# mode.insert = "INSERT"
+# mode.select = "SELECT"
+
 [editor.statusline]
-left = [
-  "mode",
-  "spacer",
-  "version-control",
-  "spacer",
-  "separator",
-  "file-name",
-  "file-modification-indicator"
-]
-right = [
-  "spinner",
-  "spacer",
-  "workspace-diagnostics",
-  "separator",
-  "spacer",
-  "diagnostics",
-  "position",
-  "file-encoding",
-  "file-line-ending",
-  "file-type"
-]
-separator = "╎"
+left = ["mode", "spinner", "read-only-indicator", "file-modification-indicator"]
+center = ["file-name", "version-control"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
-

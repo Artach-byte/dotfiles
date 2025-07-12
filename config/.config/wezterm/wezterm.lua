@@ -7,10 +7,10 @@ local config = {}
 if wezterm.config_builder then config = wezterm.config_builder() end
 
 -- Settings
-config.default_prog = { "/usr/bin/fish", "-l" }
+config.default_prog = { "/home/linuxbrew/.linuxbrew/bin/zsh", "-l" }
 
 config.color_scheme = "catppuccin-mocha"
-config.font = wezterm.font ('Iosevka Nerd Font')
+config.font = wezterm.font('Iosevka Nerd Font')
 config.window_background_opacity = 0.95
 config.font_size = 13
 config.window_decorations = "RESIZE"
@@ -21,8 +21,8 @@ config.hide_mouse_cursor_when_typing = true
 
 -- Dim inactive panes
 config.inactive_pane_hsb = {
-  saturation = 0.24,
-  brightness = 0.5
+    saturation = 0.24,
+    brightness = 0.5
 }
 config.enable_wayland = true
 

@@ -1,17 +1,15 @@
-#!/usr/bin/env bash
-
 # Aliases for ZSH
 alias zshreload='source ~/.zshrc' # reload ZSH
 
-# Dirs
+# Directory navigation
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
 
-# lazygit
+# Git tools
 alias lg='lazygit'
 
-#filemanager
+# File manager
 alias fm='yazi'

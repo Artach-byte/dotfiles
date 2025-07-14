@@ -9,7 +9,7 @@ cursorcolumn = false
 cursorline = true
 line-number = "relative"
 mouse = false
-rulers = [79]
+# rulers = [79]
 true-color = true
 
 [editor.cursor-shape]

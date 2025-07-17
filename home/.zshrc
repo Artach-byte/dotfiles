@@ -78,7 +78,7 @@ plug 'bilelmoussaoui/flatpak-zsh-completion'
 ################################################################################
 #                              Plugins End                                     #
 ################################################################################
-#zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
+# zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
 zstyle ':fzf-tab:*' fzf-command fzf
 eval "$(atuin init zsh)"
 

@@ -1,8 +1,7 @@
 # Aliases for ZSH
 alias zshreload='source ~/.zshrc' # reload ZSH
 
-#alias ls='ls --color'
-alias ls='eza -l --icons --git -a -G'
+alias ls='ls --color'
 
 # Directory navigation
 alias ..="cd .."
@@ -15,4 +14,7 @@ alias ......="cd ../../../../.."
 alias lg='lazygit'
 
 # File manager
-alias fm='yazi'
+# alias fm='yazi'
+
+# Ncspot
+#alias ncspot= 'flatpak run io.github.hrkfdn.ncspot'

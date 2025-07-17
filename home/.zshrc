@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 #!/usr/bin/env bash
 ################################################################################
 #                           History config                                     #
@@ -58,7 +51,17 @@ compinit
 source ~/.config/zsh/aliases.zsh
 
 ## fzf theme config
-source ~/.config/zsh/fzf-themes.zsh
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#313244,bg:#1E1E2E,spinner:#F5E0DC,hl:#F38BA8 \
+--color=fg:#CDD6F4,header:#F38BA8,info:#CBA6F7,pointer:#F5E0DC \
+--color=marker:#B4BEFE,fg+:#CDD6F4,prompt:#CBA6F7,hl+:#F38BA8 \
+--color=selected-bg:#45475A \
+--color=border:#313244,label:#CDD6F4"
+
+#carapace completions
+export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+source <(carapace _carapace)
 
 ################################################################################
 #                                 Plugins Start                                #
@@ -68,22 +71,18 @@ source ~/.config/zsh/fzf-themes.zsh
 [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
 plug 'Aloxaf/fzf-tab'
 plug "zsh-users/zsh-autosuggestions"
-plug "romkatv/powerlevel10k"
 plug "zsh-users/zsh-syntax-highlighting"
 plug "hlissner/zsh-autopair"
-plug 'sudosubin/zsh-github-cli'
-plug '3v1n0/zsh-bash-completions-fallback'
-plug 'bilelmoussaoui/flatpak-zsh-completion'
+# plug 'sudosubin/zsh-github-cli'
+# plug '3v1n0/zsh-bash-completions-fallback'
+# plug 'bilelmoussaoui/flatpak-zsh-completion'
 
 ################################################################################
 #                              Plugins End                                     #
 ################################################################################
-# zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
-zstyle ':fzf-tab:*' fzf-command fzf
+zstyle ':fzf-tab:*' fzf-flags ${(z)FZF_DEFAULT_OPTS}
 eval "$(atuin init zsh)"
+eval "$(starship init zsh)"
 
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -14,7 +14,4 @@ alias ......="cd ../../../../.."
 alias lg='lazygit'
 
 # File manager
-# alias fm='yazi'
-
-# Ncspot
-#alias ncspot= 'flatpak run io.github.hrkfdn.ncspot'
+alias fm='yazi'

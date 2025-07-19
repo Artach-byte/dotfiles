@@ -73,16 +73,12 @@ plug 'Aloxaf/fzf-tab'
 plug "zsh-users/zsh-autosuggestions"
 plug "zsh-users/zsh-syntax-highlighting"
 plug "hlissner/zsh-autopair"
-# plug 'sudosubin/zsh-github-cli'
-# plug '3v1n0/zsh-bash-completions-fallback'
-# plug 'bilelmoussaoui/flatpak-zsh-completion'
 
 ################################################################################
 #                              Plugins End                                     #
 ################################################################################
 zstyle ':fzf-tab:*' fzf-flags ${(z)FZF_DEFAULT_OPTS}
 eval "$(atuin init zsh)"
-eval "$(starship init zsh)"
-
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
+eval "$(starship init zsh)"

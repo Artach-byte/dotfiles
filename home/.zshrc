@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 #!/usr/bin/env bash
 ################################################################################
 #                           History config                                     #
@@ -73,12 +80,22 @@ plug 'Aloxaf/fzf-tab'
 plug "zsh-users/zsh-autosuggestions"
 plug "zsh-users/zsh-syntax-highlighting"
 plug "hlissner/zsh-autopair"
+#plug "multirious/zsh-helix-mode"
+plug "romkatv/powerlevel10k"
 
 ################################################################################
 #                              Plugins End                                     #
 ################################################################################
 zstyle ':fzf-tab:*' fzf-flags ${(z)FZF_DEFAULT_OPTS}
+
 eval "$(atuin init zsh)"
+
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
-eval "$(starship init zsh)"
+
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# To customize prompt, run `p10k configure` or edit /var/home/joe/.p10k.zsh.
+[[ ! -f /var/home/joe/.p10k.zsh ]] || source /var/home/joe/.p10k.zsh

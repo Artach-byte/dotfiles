@@ -2,6 +2,8 @@ theme = "catppuccin_mocha"
 
 [editor]
 auto-format = true
+auto-completion = true
+auto-save = true
 bufferline = "multiple"
 color-modes = true
 completion-replace = true
@@ -9,29 +11,26 @@ cursorcolumn = false
 cursorline = true
 line-number = "relative"
 mouse = false
-# rulers = [79]
+rulers = [80]
 true-color = true
 
-[editor.cursor-shape]
-insert = "bar"
-normal = "block"
-select = "underline"
+[editor.whitespace.render]
+space = "none"
+nbsp = "none"
+tab = "none"
+newline = "none"
 
-[editor.indent-guides]
-render = true
-character = "╎" # Some characters that work well: "▏", "┆", "┊", "╎"
-skip-levels = 0
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+tab = "→"
+newline = "⏎"
+tabpad = "·" # Tabs will look like "→···" (depending on tab width)
 
 [editor.file-picker]
 hidden = false
-
-# [editor.statusline]
-# left = ["mode", "spinner", "file-name", "file-modification-indicator"]
-# right = ["version-control", "diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
-# separator = "|"
-# mode.normal = "NORMAL"
-# mode.insert = "INSERT"
-# mode.select = "SELECT"
+git-ignore = true
+git-global = false
 
 [editor.statusline]
 left = ["mode", "spinner", "read-only-indicator", "file-modification-indicator"]
@@ -41,3 +40,11 @@ separator = "│"
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.indent-guides]
+render = true

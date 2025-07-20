@@ -3,7 +3,7 @@ theme = catppuccin-mocha
 #background-opacity = 0.95
 
 # Font
-font-family = Iosevka Nerd Font
+font-family = Terminess Nerd Font Mono
 font-size = 14
 
 # Shell

@@ -7,8 +7,11 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "git_panel": {
+  "outline_panel": {
     "dock": "right"
+  },
+  "git_panel": {
+    "dock": "left"
   },
   "agent": {
     "default_profile": "write",

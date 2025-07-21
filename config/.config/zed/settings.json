@@ -22,6 +22,8 @@
   "buffer_font_family": "Iosevka Nerd Font",
   "buffer_font_size": 16,
   "helix_mode": true,
+  "base_keymap": "VSCode",
+  "show_whitespaces": "all",
   "theme": {
     "mode": "system",
     "light": "One Light",

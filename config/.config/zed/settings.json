@@ -7,6 +7,16 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "git_panel": {
+    "dock": "right"
+  },
+  "agent": {
+    "default_profile": "write",
+    "default_model": {
+      "provider": "ollama",
+      "model": "qwen2.5-coder:3b"
+    }
+  },
   "icon_theme": "Catppuccin Mocha",
   "ui_font_size": 16,
   "buffer_font_family": "Iosevka Nerd Font",

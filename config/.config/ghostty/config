@@ -3,8 +3,8 @@ theme = catppuccin-mocha
 #background-opacity = 0.95
 
 # Font
-font-family = Terminess Nerd Font Mono
-font-size = 14
+font-family = Terminess Nerd Font
+font-size = 16
 
 # Shell
 command = /home/linuxbrew/.linuxbrew/bin/zsh --login --interactive

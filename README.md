@@ -16,8 +16,6 @@ zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) 
 
 ## 🚀 Required Programs
 
-To unlock the full power of these dotfiles, make sure to have the following applications installed:
-
 ---
 
 ### 🛠️ Essential Applications

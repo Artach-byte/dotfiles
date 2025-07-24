@@ -8,21 +8,8 @@
 [core]
 	editor = hx
 	excludesFile = /home/joe/.gitignore
-	pager = delta
+	# pager = delta
 [credential "https://github.com"]
 	helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential
 [credential "https://gist.github.com"]
 	helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential
-[interactive]
-	diffFilter = delta --color-only
-[delta]
-	side-by-side = true
-	line-numbers-left-format = ""
-	line-numbers-right-format = "│"
-	path = /home/joe/delta/themes/mocha.gitconfig
-	features = catppuccin-mocha
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true

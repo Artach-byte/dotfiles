@@ -1,17 +1,10 @@
-<h1 align="center">Welcome to my dotfiles 👋</h1>
-<p>
-  <a href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank">
-    <img alt="License: AGPL--3.0" src="https://img.shields.io/badge/License-AGPL--3.0-yellow.svg" />
-  </a>
-</p>
-
-## Install Commands
+# Install Commands
 
 ```sh
 git clone https://github.com/Artach-byte/dotfiles.git /home/$USER/dotfiles && cd /home/$USER/dotfiles
-# check scipt before use !!!!
+# check script before use !!!!
 sudo chmod u+x install.sh
-# seriously always check unknown scipts before use!!!
+# seriously always check unknown scripts before use!!!
 ./install.sh
 ```
 

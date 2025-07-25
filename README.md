@@ -9,9 +9,10 @@
 
 ```sh
 git clone https://github.com/Artach-byte/dotfiles.git /home/$USER/dotfiles && cd /home/$USER/dotfiles
-stow config && stow home # in dotfile dir
-bat cache --build # this added new themes to bat
-zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1 -k # to install zap and keep zshrc config
+# check scipt before use !!!!
+sudo chmod u+x install.sh
+# seriously always check unknown scipts before use!!!
+./install.sh
 ```
 
 ## 🚀 Required Programs

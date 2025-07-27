@@ -7,8 +7,6 @@ programs=(
     "zsh"
     "bat"
     "fzf"
-    "starship"
-    "atuin"
     "btop"
     "yazi"
     "zellij"
@@ -17,8 +15,6 @@ programs=(
     "fd"
     "hx" # helix editor
     "ugrep"
-    "zoxide"
-    "zed" # gui zed editor
 )
 
 

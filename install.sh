@@ -2,62 +2,72 @@
 
 # vars
 missing=()
+
+# var for required packages
 packages=(
-    "stow"
-    "zsh"
-    "bat"
-    "fzf"
-    "btop"
-    "yazi"
-    "zellij"
-    "rg" # ripgrep
-    "tmux"
-    "fd"
-    "hx" # helix editor
-    "ugrep"
-    "nvim"
-    "ranger"
+  "stow"
+  "zsh"
+  "bat"
+  "fzf"
+  "btop"
+  "yazi"
+  "zellij"
+  "rg" # ripgrep
+  "tmux"
+  "fd"
+  "hx" # helix editor
+  "ugrep"
+  "nvim"
+  "atuin"
+  "trash"
+  "carapace"
 )
 
 # check for missing packages
-for prog in "${packages[@]}"; do
-    if ! command -v "$prog" >/dev/null 2>&1; then
-        missing+=("$prog")
-    fi
+for pkg in "${packages[@]}"; do
+  if ! command -v "$pkg" >/dev/null 2>&1; then
+    missing+=("$pkg")
+  fi
 done
 
-# dotfile setup if all packages are installed
 if [ ${#missing[@]} -eq 0 ]; then
-    echo "all packages installed"
-    stow config && stow home
-    bat cache --build
-    zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1 -k
-    exit 0
-fi
-
-# Print missing packages
-echo "The following packages are missing"
-printf ' - %s\n' "${missing[@]}"
-
-# User input
-read -rp "Do you wish to install[y/N]" confirm
-[[ "$confirm" =~ ^[Yy]$ ]] || exit 1
-
-# Discover system package manager
-if command -v brew >/dev/null 2>&1; then
-    pkg_mgr="brew"
-    install_cmd="brew install"
-    elif command -v pacman >/dev/null 2>&1; then
-    pkg_mgr="pacman"
-    install_cmd="sudo pacman -Sy --noconfirm"
-    elif command -v apt >/dev/null 2>&1; then
-    pkg_mgr="apt"
-    install_cmd="sudo apt update && sudo apt install -y"
+  echo "all packages installed"
+  echo ""
+  read -rp "Do you wish to continue [y/N]: " confirm
+  echo ""
+  [[ "$confirm" =~ ^[Yy]$ ]] || exit 1
 else
-    echo "Unsupported package manager"
-    exit 1
+  # Print missing packages
+  echo "The following packages are missing"
+  printf ' - %s\n' "${missing[@]}"
 fi
 
-# install packages with pkg manager
-echo "Using $pkg_mgr to install: ${missing[*]}"
-eval "$install_cmd ${missing[*]}"
+# create symlinks with stow
+# --adopt allows for overwriting
+echo "Generating symlinks with stow"
+echo ""
+stow --adopt config
+stow --adopt home
+
+# refreshing batconfig for installed themes
+read -rp "Would you like to add themes to Bat [y/N]: " confirm
+[[ "$confirm" =~ ^[Yy]$ ]]
+bat cache --build
+echo ""
+
+# Install zap plugin manager for zsh
+echo "Now installing zap zsh plugin manager"
+zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1 -k
+echo ""
+
+# Font Install
+echo "Would you like to install fonts with getnf?"
+read -rp "[y/N]: " confirm
+[[ "$confirm" =~ ^[Yy]$ ]] || exit 1
+echo ""
+curl -fsSL https://raw.githubusercontent.com/getnf/getnf/main/install.sh | bash
+getnf
+echo ""
+echo "Dotfile setup finished"
+
+exit 0

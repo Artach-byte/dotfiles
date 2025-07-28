@@ -79,7 +79,7 @@ export FZF_DEFAULT_OPTS=" \
 plug 'Aloxaf/fzf-tab'
   zstyle ':fzf-tab:*' fzf-flags ${(z)FZF_DEFAULT_OPTS}
   
-plug "joshskidmore/zsh-fzf-history-search"
+# plug "joshskidmore/zsh-fzf-history-search"
 
 plug "zsh-users/zsh-autosuggestions"
 
@@ -91,6 +91,17 @@ plug "zsh-users/zsh-completions"
 plug "romkatv/powerlevel10k"
 
 plug "zsh-users/zsh-syntax-highlighting" #NOTE: Keep this plugin last
+
+
+################################################################################
+#                           End  Misc Evals                                    #
+################################################################################
+
+eval "$(atuin init zsh)"
+
+export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+source <(carapace _carapace)
 
 ################################################################################
 #                              Prompt                                          #

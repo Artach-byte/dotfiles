@@ -20,8 +20,8 @@ This repository contains my personal configuration files for a range of terminal
 
 - Managed with [GNU Stow](https://www.gnu.org/software/stow/) for simple and clean symlink-based configuration
 - Installation script that:
-  - Checks for and missing dependencies
-  - Installs a Zsh plugin manager
+  - Checks for and missing dependencies.
+  - Installs [zap](https://github.com/zap-zsh/zap) a zsh plugin manager
   - Downloads and installs Nerd Fonts using [`getnf`](https://github.com/ronniedroid/getnf)
 - Designed to work across a variety of Linux distributions and Unix-like systems
 
@@ -40,32 +40,3 @@ This repository contains my personal configuration files for a range of terminal
    sudo chmod u+x install.sh
    ./install.sh
    ```
-
-## File Structue
-
-├── config
-│ └── .config
-│ ├── atuin
-│ ├── bat
-│ ├── btop
-│ ├── cava
-│ ├── ghostty
-│ ├── helix
-│ ├── ranger
-│ ├── scopebuddy
-│ ├── starship.toml
-│ ├── tmux
-│ ├── wezterm
-│ ├── yazi
-│ ├── zathura
-│ ├── zed
-│ ├── zellij
-│ └── zsh
-├── home
-│ ├── .gitconfig
-│ ├── .tmux.conf
-│ ├── .zshenv
-│ └── .zshrc
-├── install.sh
-├── LICENSE
-└── README.md

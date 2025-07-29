@@ -1,46 +1,71 @@
-# Install Commands
+# Dotfiles
 
-```sh
-git clone https://github.com/Artach-byte/dotfiles.git /home/$USER/dotfiles && cd /home/$USER/dotfiles
-# check script before use !!!!
-sudo chmod u+x install.sh
-# seriously always check unknown scripts before use!!!
-./install.sh
-```
+This repository contains my personal configuration files for a range of terminal tools, editors, and utilities. The setup is designed to be portable, easy to manage, and distribution-agnostic. Configurations are organized and deployed using [GNU Stow](https://www.gnu.org/software/stow/) for a clean, modular structure across systems.
 
-## 🚀 Required Programs
+## Included Configurations
 
----
+- **Shell & Terminal**:
+  [zsh](https://github.com/zsh-users/zsh), [tmux](https://github.com/tmux/tmux), [zellij](https://github.com/zellij-org/zellij), [wezterm](https://github.com/wez/wezterm), [ghostty](https://github.com/ghostty-org/ghostty)
 
-### 🛠️ Essential Applications
+- **Utilities**:
+  [atuin](https://github.com/atuinsh/atuin), [bat](https://github.com/sharkdp/bat), [btop](https://github.com/aristocratos/btop), [cava](https://github.com/karlstav/cava), [ranger](https://github.com/ranger/ranger), [yazi](https://github.com/sxyazi/yazi), [zathura](https://git.pwmt.org/pwmt/zathura), [starship](https://starship.rs/)
 
-| Program      | Description                         | Link                                                |
-| ------------ | ----------------------------------- | --------------------------------------------------- |
-| **GNU Stow** | Manages symlinks for config files   | [GNU Stow](https://www.gnu.org/software/stow/)      |
-| **zsh**      | Main shell with custom plugins      | [Zsh](https://www.zsh.org/)                         |
-| **bat**      | Syntax-highlighted file previews    | [bat](https://github.com/sharkdp/bat)               |
-| **fzf**      | Command-line fuzzy finder           | [fzf](https://github.com/junegunn/fzf)              |
-| **starship** | Cross-shell prompt theme            | [Starship](https://starship.rs/)                    |
-| **atuin**    | Advanced shell history              | [Atuin](https://atuin.sh/)                          |
-| **carapace** | Shell completion engine             | [Carapace](https://github.com/carapace-sh/carapace) |
-| **btop**     | Modern resource monitor             | [Btop](https://github.com/aristocratos/btop)        |
-| **yazi**     | Blazing fast terminal file explorer | [Yazi](https://github.com/sxyazi/yazi)              |
-| **zellij**   | Terminal workspace & multiplexer    | [Zellij](https://github.com/zellij-org/zellij)      |
-| **ripgrep**  | Fast searching tool                 | [Ripgrep](https://github.com/BurntSushi/ripgrep)    |
-| **fd**       | Simple, fast alternative to `find`  | [Fd](https://github.com/sharkdp/fd)                 |
-| **Helix**    | Code editor for the command line    | [Helix](https://helix-editor.com/)                  |
-| **ugrep**    | Improved search utility             | [Ugrep](https://github.com/Genivia/ugrep)           |
-| **zoxide**   | Interactive directory navigation    | [Zoxide](https://github.com/ajeetdsouza/zoxide)     |
-| **zed**      | The editor for what's next          | [zed.dev](https://zed.dev/)                         |
+- **Editors**:
+  [helix](https://github.com/helix-editor/helix), [zed](https://github.com/zed-industries/zed)
 
----
+- **Misc**:
+  [scopebuddy](https://github.com/HikariKnight/ScopeBuddy)
 
-## Author
+## Features
 
-👤 **Joseph Hansen**
+- Managed with [GNU Stow](https://www.gnu.org/software/stow/) for simple and clean symlink-based configuration
+- Installation script that:
+  - Checks for and missing dependencies
+  - Installs a Zsh plugin manager
+  - Downloads and installs Nerd Fonts using [`getnf`](https://github.com/ronniedroid/getnf)
+- Designed to work across a variety of Linux distributions and Unix-like systems
 
-- Github: [@Artach-byte](https://github.com/Artach-byte)
+## Installation
 
----
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Artach-byte/dotfiles.git /home/$USER/dotfiles
+   ```
+2. Change Directory:
+   ```bash
+   cd dotfiles
+   ```
+3. Make scipt is executable && run script:
+   ```bash
+   sudo chmod u+x install.sh
+   ./install.sh
+   ```
 
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+## File Structue
+
+├── config
+│ └── .config
+│ ├── atuin
+│ ├── bat
+│ ├── btop
+│ ├── cava
+│ ├── ghostty
+│ ├── helix
+│ ├── ranger
+│ ├── scopebuddy
+│ ├── starship.toml
+│ ├── tmux
+│ ├── wezterm
+│ ├── yazi
+│ ├── zathura
+│ ├── zed
+│ ├── zellij
+│ └── zsh
+├── home
+│ ├── .gitconfig
+│ ├── .tmux.conf
+│ ├── .zshenv
+│ └── .zshrc
+├── install.sh
+├── LICENSE
+└── README.md
